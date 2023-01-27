@@ -28,6 +28,7 @@
 - 주의점
     - 음수 값을 가지는 입출력 변수에 대해서 로그 변환이나, 로그-로그 모델은 적합하지 않다. 
     - log transform된 데이터 해석
+    - [여러가지 함수 변환](https://seeyapangpang.tistory.com/34)
     - 다음의 블로그를 사용해서 공부해보자. [회귀분석에서 로그변환 시 계수 해석](https://danbi-ncsoft.github.io/study/2018/08/07/logwithlevel.html)
 
 
@@ -39,10 +40,24 @@
 ```
 
 > 문자열 데이터 결측값 처리
+---
 ```
 #아래와 같은 방법으로 문자열 데이터만 따로 뽑아낼 수 있다. 
 df.select_dtypes(exclude=[np.number])
 
 #아래와 같은 방법으로 최빈값을 뽑아낼 수 있다. 
 value = df.mode()[0]
+```
+
+## 수치 데이터 왜도 값 처리
+--- 
+```
+왜도
+Box-Cox변환
+```
+- 왜도는 분포의 비대칭도를 나타내는 통계량을 의미한다. 
+- 예측 변수를 활용할 떄 이러한 왜도를 보정하는 것이 또한 중요하다. 
+```
+from scipy.stats import skew
+skew(dataframe)
 ```
