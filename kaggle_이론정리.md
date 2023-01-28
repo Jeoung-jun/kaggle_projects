@@ -55,9 +55,19 @@ value = df.mode()[0]
 왜도
 Box-Cox변환
 ```
+>왜도
 - 왜도는 분포의 비대칭도를 나타내는 통계량을 의미한다. 
 - 예측 변수를 활용할 떄 이러한 왜도를 보정하는 것이 또한 중요하다. 
 ```
 from scipy.stats import skew
 skew(dataframe)
+```
+
+>Box-Cox 변환
+- 왜도가 높으면 Box-Cox Transformation을 사용한다. 
+
+## 범주형 변수 변환
+```
+- 더미 변환(2개)
+- Label Encoding, Ordinal Encoding, One-Hot Encoding
 ```
