@@ -68,6 +68,21 @@ skew(dataframe)
 
 ## 범주형 변수 변환
 ```
-- 더미 변환(2개)
-- Label Encoding, Ordinal Encoding, One-Hot Encoding
+- 더미 변환(2개) -> Data Binding 이라고도함
+- Label Encoding, Ordinal Encoding, One-Hot Encoding(3개 이상)
 ```
+
+>더미 변환
+- 간단하게 남자이면 0 여자이면 1처럼 두가지의 범주로 나누어 주는 변환 방식이다. 
+
+>Label Encoding
+- 대상 데이터: 종속변수(y)
+- 0~ 클래스 개수 -1 까지 대상 레이블을 인코딩한다. x가 아니라 종속 변수인 y이어야 함이 중요하다.
+>Ordinal Encoding
+- 대상 데이터: 독립변수(X)
+- 범주형 변수를 정수로 인코딩한다. 
+- Tree 기반 알리ㅁ에 적용할 때  더 좋은 성능을 보여준다고 알려져있다. 
+>One-Hot Encoding
+- 대상 데이터: 독립변수(X)
+- 범주형 변수를 0과 1의 정수 배열로 인코딩한다. 
+- 선형회귀, 로지스틱 회귀, Support vector machine과 같은 non-tree기반 알고리즘이 더 좋은 성능을 보여준다고 알려져있다. 
